@@ -1,0 +1,113 @@
+body {
+    margin: 50px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+a {
+    display: flex;
+    margin-bottom: -50px;
+    text-decoration: none;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    background-color: #E31C3F;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+}
+
+#menu-open:checked ~ a {
+    display: flex;
+    margin-bottom: 15px;
+    text-decoration: none;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    background-color: #E31C3F;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    opacity: 100;
+    transition-duration: 0.5s;
+}
+
+
+#menu-open:checked ~ a:hover {
+    border: 1.5px solid #E31C3F;
+    background-color: white;
+    color: #E31C3F;
+    box-sizing: border-box;
+    transition-duration: 0s;
+}
+
+
+.menu-open-button {
+    display: flex;
+    margin-bottom: 15px;
+    text-decoration: none;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    background-color: #E31C3F;
+    border-radius: 50px;
+    width: 80px;
+    height: 80px;  
+}
+
+
+
+#menu-open:checked ~ .menu-open-button  {
+    width: 50px;
+    height: 50px;
+  
+}
+
+#menu-open {
+    display: none;
+}
+
+span,
+span::before,
+span::after {
+    display: block;
+    background-color: white;
+    position: absolute;
+    height: 3px;
+    width: 20px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 20px; 
+}
+  
+span::before {
+    content: '';
+    margin-top: -6px;
+}
+  
+span::after {
+    content: '';
+    margin-top: 6px;
+}
+  
+#menu-open:checked + .menu-open-button span::before {
+    margin-top: 0px;
+    transform: rotate(45deg);
+}
+  
+#menu-open:checked + .menu-open-button span {
+    background: rgba(255, 255, 255, 0);
+}
+  
+#menu-open:checked + .menu-open-button span::after {
+    margin-top: 0px;
+    transform: rotate(-45deg);
+}
