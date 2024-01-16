@@ -76,38 +76,38 @@ a {
     display: none;
 }
 
-span,
-span::before,
-span::after {
+.menu-line-1,
+.menu-line-2,
+.menu-line-3 {
     display: block;
     background-color: white;
     position: absolute;
-    height: 3px;
+    height: 2px;
     width: 20px;
     transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
     border-radius: 20px; 
 }
   
-span::before {
+.menu-line-1 {
     content: '';
-    margin-top: -6px;
+    margin-top: -12px;
 }
   
-span::after {
+.menu-line-3 {
     content: '';
-    margin-top: 6px;
+    margin-top: 12px;
 }
   
-#menu-open:checked + .menu-open-button span::before {
+#menu-open:checked + .menu-open-button .menu-line-1 {
     margin-top: 0px;
     transform: rotate(45deg);
 }
   
-#menu-open:checked + .menu-open-button span {
+#menu-open:checked + .menu-open-button .menu-line-2 {
     background: rgba(255, 255, 255, 0);
 }
   
-#menu-open:checked + .menu-open-button span::after {
+#menu-open:checked + .menu-open-button .menu-line-3 {
     margin-top: 0px;
     transform: rotate(-45deg);
 }
